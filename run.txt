@@ -22,3 +22,4 @@ cd C:\virt\pr1\virt\try\
 .\sqlite3.exe db.sqlite3
 .mode csv
 .import out.csv catalog_azbuka_items
+test
