@@ -1,0 +1,15 @@
+{% extends 'main/loyout.html' %}
+
+{% block title %}Удалить статью{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Удалить статью</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success"> Удалить статью</button>
+
+        </form>
+    </div>
+{% endblock %}

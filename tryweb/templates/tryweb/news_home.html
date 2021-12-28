@@ -1,0 +1,26 @@
+{% extends 'main/loyout.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Новости на сайте</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deleniti doloribus officia officiis quam quasi rerum tempore ut voluptates voluptatibus.</p>
+        <button class="btn btn-success">{% include 'main/include.html'%}</button>
+        <p>{% include 'main/include.html'%}</p>
+
+        {% for el in news %}
+            <div class = 'alert alert-warning'>
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.anons }}</p>
+                <a href="{% url 'news-detail' el.id %}" class="btb btn-warning">Подробнее</a>
+            </div>
+        {% endfor %}
+
+
+    </div>
+
+
+
+{% endblock %}

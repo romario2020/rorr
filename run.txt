@@ -1,0 +1,24 @@
+1. virtualenv virt
+
+cd C:\virt\pr1\virt\scripts
+.\activate.ps1
+
+cd C:\virt\pr1\virt\try
+python manage.py runserver
+
+2. pip install django
+3. C:\virt\pr1\virt\scripts> django-admin startproject try
+PS C:\virt\pr1\virt\try> python manage.py startapp tryweb
+PS C:\virt\pr1\virt\try> python manage.py migrate
+PS C:\virt\pr1\virt\try> python manage.py createsuperuser
+
+cd C:\virt\pr1\virt\try
+python manage.py makemigrations
+PS C:\virt\pr1\virt\try> python manage.py migrate
+
+4. pip install requests
+
+cd C:\virt\pr1\virt\try\
+.\sqlite3.exe db.sqlite3
+.mode csv
+.import out.csv catalog_azbuka_items

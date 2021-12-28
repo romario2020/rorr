@@ -1,0 +1,21 @@
+{% extends 'main/loyout.html' %}
+
+{% block title %}Генератор контента{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Генератор и форма контента</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.dates }}<br>
+            <span>{{ error }}</span><br><br>
+
+            <button type="submit" class="btn btn-success"> Сохранить статью</button>
+
+        </form>
+    </div>
+{% endblock %}

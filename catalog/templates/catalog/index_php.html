@@ -1,0 +1,152 @@
+
+{% extends 'catalog/louyr_catalog.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+  <div class="row" style="height: 100%">
+    {% include 'catalog/iframe.html' %}
+
+    <div class="col-xl-3" style="overflow: hidden">
+      <div class="container" style="margin-top: 10px">
+      {% include 'catalog/menu_small_right.html' %}
+      </div>
+
+      {% include 'catalog/value_cloth.html' %}
+      {% include 'catalog/small_menu.html' %}
+
+        <div class="hi_block col-lg-12" style="margin-top: 30px">
+          <div class="row">
+          		<div>
+          		   <div class="container">
+          		     <ul id="clothingnav1" class="nav nav-tabs" role="tablist">
+          		       <li class="nav-item"> <a class="nav-link active" href="#home2" id="hometab1"
+                       role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Велюр</a> </li>
+          		       <li class="nav-item"> <a class="nav-link" href="#paneTwo2" role="tab" id="hatstab1"
+                        data-toggle="tab" aria-controls="hats">Жаккард</a></li>
+          				   <li class="nav-item"> <a class="nav-link" href="#paneTwo3" role="tab" id="hatstab2"
+                        data-toggle="tab" aria-controls="hats">Рогожка</a></li>
+                     <li class="nav-item"> <a class="nav-link" href="#paneTwo4" role="tab" id="hatstab3"
+                         data-toggle="tab" aria-controls="hats">Флок</a></li>
+          	         </ul>
+
+          		     <!-- Content Panel -->
+          		     <div id="clothingnavcontent2" class="tab-content" style="overflow: auto;  height: 235px" >
+                     <!-- Рогожка - первый блок -->
+          		     <div role="tabpanel" class="tab-pane fade show active" id="home2" aria-labelledby="hometab1">
+        		         <div class="container" role="group" aria-label="Basic outlined example">
+                     <p>Категория ткани: <b>Велюр</b></p>
+                     {% for m in posts_cloths_items1  %}
+                      <button class="my_button" id="{{ m.code_item.url }}" img_name="{{ m.name_item }}" src="{{ m.photo_item.url }}" style="background-image: url({{ m.photo_item.url }});">{{ m.name_item }}</button>
+                     {% endfor %}
+                    </div>
+          				  </div>
+                   <!-- второй блок -->
+        		      <div role="tabpanel" class="tab-pane fade" id="paneTwo2" aria-labelledby="hatstab1">
+                     <div class="container" role="group" aria-label="Basic outlined example">
+        		         <p>Категория ткани: <b>Жаккард</b></p>
+                     {% for m in posts_cloths_items2  %}
+                      <button class="my_button" id="{{ m.code_item.url }}" img_name="{{ m.name_item }}" src="{{ m.photo_item.url }}" style="background-image: url({{ m.photo_item.url }});">{{ m.name_item }}</button>
+                     {% endfor %}
+                      </div>
+        				   </div>
+
+                      <!-- Флок - третий блок -->
+          		       <div role="tabpanel" class="tab-pane fade" id="paneTwo3" aria-labelledby="hatstab2">
+                        <div class="container" role="group" aria-label="Basic outlined example">
+              		        <p>Категория ткани: <b>Рогожка</b></p>
+                          {% for m in posts_cloths_items5  %}
+                           <button class="my_button" id="{{ m.code_item.url }}" img_name="{{ m.name_item }}" src="{{ m.photo_item.url }}" style="background-image: url({{ m.photo_item.url }});">{{ m.name_item }}</button>
+                          {% endfor %}
+                        </div>
+            				 </div>
+
+                      <!-- Флок - четвертый блок -->
+                     <div role="tabpanel" class="tab-pane fade" id="paneTwo4" aria-labelledby="hatstab3">
+                        <div class="container" role="group" aria-label="Basic outlined example">
+              		        <p>Категория ткани: <b>Флок</b></p>
+                          {% for m in posts_cloths_items6  %}
+                           <button class="my_button" id="{{ m.code_item.url }}" img_name="{{ m.name_item }}" src="{{ m.photo_item.url }}" style="background-image: url({{ m.photo_item.url }});">{{ m.name_item }}</button>
+                          {% endfor %}
+                        </div>
+            				 </div>
+          	         </div>
+          	        </div>
+              </div>
+    		  </div>
+    	   </div>
+
+     <div class="container" id= "calc_block" style="margin-top: 50px">
+        <div class="alert alert-success">Стоимость дивана:  <strong id="price_divan"></strong>  руб., <strong id ="cloth_categor" class="badge badge-secondary"> </strong> категории </div>
+        <button id= "main_sale" type="button" class="btn btn-outline-success btn-sm btn-block">Оформить заказ</button>
+     </div>
+    </div>
+
+
+
+  <div id="footer">
+      <div class="container">
+          <div class="menu_line">
+            <span class="menu_4but" id="q1"><i class="fas fa-heart"></i></span>
+            <span class="menu_4but" id="q2"><i class="far fa-heart"></i></span>
+
+            <span class="menu_4but" id="q4"><i class="far fa-eye-slash"></i></span>
+            <span class="menu_4but" id="q5"><i class="fas fa-download"></i></span>
+            <span class="menu_4but" id="q6"><i class="fas fa-camera"></i></span>
+          </div>
+
+  </div>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="modal-content" class="modal-content">
+
+      <div  id="modal-content2" class="modal-content2">
+        <span class="close">&times;</span>
+
+          <div>
+            <p><h3>Заказ №: 5874</h3></p>
+            <div id = "main_scr"></div>
+          </div>
+          <div class="container">
+
+            <div id="calc_block">
+               <div>
+                 Стоимость дивана:  <strong id="price_divan_sale"></strong>  руб.
+                 <p>Категория ткани: <strong id = "cloth_categor_sale"> </strong></p>
+               </div>
+            </div>
+          </div>
+
+
+        <form>
+          <div class="form-group form_ind">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group form_ind">
+            <label for="pwd">Ваше имя:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Имя Фамилия" name="pswd">
+          </div>
+
+        </form>
+
+      </div>
+      <button id="sale_pdf" type="button" class="btn btn-success">Оформить</button>
+
+
+    </div>
+  </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}

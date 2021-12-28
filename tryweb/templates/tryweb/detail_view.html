@@ -1,0 +1,16 @@
+{% extends 'main/loyout.html' %}
+
+{% block title %}{{ code.title }}{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>{{ code.title }}</h1>
+        <p>{{ code.dates }}</p>
+        <p>{{ code.full_text }}</p>
+        <a href="{% url 'news-delete' code.id %}" class="btb btn-warning">Удалить</a>
+        <a href="{% url 'news-update' code.id %}" class="btb btn-info">Редактировать</a>
+
+    </div>
+
+{% endblock %}

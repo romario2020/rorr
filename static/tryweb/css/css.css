@@ -1,0 +1,315 @@
+.col-xl-9 iframe {
+    height: 100%;
+    width: 100%;
+    border-width: 0px;
+}
+
+
+.menu_line {
+  text-align: justify;
+
+}
+
+
+span {
+  font-size: 25px;
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 35px;
+}
+
+
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.menu_line i {
+  font-size: 25px;
+  text-align: center;
+}
+
+.text_input {
+  font-size: 14px;
+  text-align: left;
+
+}
+
+.my_button_2 {
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-color: #F3F3F3;
+    border-radius: 5px / 5px;
+    border: 1px solid silver;
+    font-size: smaller;
+    margin-top: 5px;
+    margin-left: 5px;
+
+
+}
+
+.my_button {
+    width: 60px;
+    height: 60px;
+    color: white;
+    white-space: nowrap;
+    border-radius: 5px / 5px;
+    text-align: center;
+    font-size: smaller;
+    font-variant: normal;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: 1px solid silver;
+
+}
+
+.my_button, {
+    transition: 1s; /* Время эффекта */
+   }
+.my_button:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+   }
+
+
+.img_active {
+  height: 50px;
+  width: 250px;
+  background-repeat: no-repeat;
+  border-radius: 5px / 5px;
+  border: 0px solid white;
+  margin-top: -2px;
+  margin-left: 5px;
+  background-position: 10px 0px;
+
+
+}
+
+.img_active:hover {
+  transition: 1s;
+  transform: scale(1, 1.1);
+}
+
+.load_del {
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  border-radius: 5px / 5px;
+  border: 1px solid silver;
+  margin-top: 0px;
+  margin-left: 5px;
+
+}
+
+.my_button_3 {
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+
+
+}
+.content {
+    width: 75%; /* Ширина слоя */
+    background: #fc0; /* Цвет фона */
+   }
+
+}
+
+.slidecontainer {
+    width: 350px
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background: grey;
+    outline: none;
+    opacity: 0.5;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #545755;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF30;
+    cursor: pointer;
+}
+
+@media (max-width:1200px) {
+  .menu_4but {
+    display: none;
+  }
+}
+
+@media(min-width:1201px) {
+  .menu {
+    display: none;
+  }
+  .menu {
+    font-size: 25px;
+  }
+
+}
+
+#environment_on {
+  display: none;
+}
+
+#head_on {
+  display: none;
+}
+
+#view_1 {
+  display: none;
+}
+
+#question_off {
+  display: none;  
+}
+/* .menu_4but:hover {
+  transition: 1s;
+  transform: scale(1.5);
+
+} */
+
+
+i {
+	position: relative;
+	cursor: pointer;
+	line-height: 1; /*задаём высоту строки*/
+	text-decoration: none; /*убираем подчёркивание*/
+
+}
+i:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: grey; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+i:hover:after,
+i:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+#footer {
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+/* модальное окно */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    padding-left: 0;
+
+}
+
+
+.myModal {
+    background-color: #fefefe;
+    height: 80vh;
+    width: 200px;
+    text-align: center;
+
+  }
+
+/* Modal Content/Box */
+#modal-content {
+    background-color: #fefefe;
+    height: 800px;
+
+    width: 600px;
+    margin: 5% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    text-align: center;
+
+  }
+
+/* #modal-content2 {
+    background-color: #fefefe;
+    height: 800px;
+    width: 600px;
+    margin: 5% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    text-align: center;
+
+  } */
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main_scr {
+  margin: auto;
+  width: 100%;
+  height: 400px;
+  margin-left: 0%;
+  background-size: contain;
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+}
+.form_ind {
+  width: 300 px;
+}
+
+
+#whatsapp {
+  font-size: 25px;
+  text-decoration-color: green;
+}

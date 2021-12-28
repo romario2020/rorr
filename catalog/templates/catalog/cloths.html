@@ -1,0 +1,62 @@
+{% extends 'catalog/louyr_catalog.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <div class="album py-5 bg-light">
+
+        <div class="container">
+
+          <div class="row">
+                  {% for m in posts_cloths_items %}
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="{{ m.photo_item.url }}" alt="{{m.name_item}}" style="height: 225px; width: 100%; display: block;">
+                      <div class="card-body">
+                        <a href="{{m.name_item}}">{{m.name_item}}</a>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-muted">{{m.price}}</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h3> {{m.name_group}} </h3>
+                  <p> {{m.purpose_group}} </p>
+                  <hr>
+                  {% endfor %}
+
+             </div>
+          </div>
+        </div>
+
+
+    <div class="features">
+        <h1>{{title}}055</h1>
+
+        <ul>
+        {% for m in menu_cloths %}
+        <li> {{m}} </li>
+        {% endfor %}
+        </ul>
+
+        <ul>
+            {% for m in posts_cloths %}
+            <h4> {{m.name_group}} </h4>
+            <p> {{m.anons_group}} </p>
+            <a href="{{m.url_group}}">{{m.anons_group}}</a>
+            <p> {{m.purpose_group}} </p>
+            <img src="{{ m.main_photo.url }}" alt="">
+
+            <hr>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+
+
+{% endblock %}

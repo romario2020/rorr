@@ -1,0 +1,70 @@
+{% extends 'tryweb/index.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+<h1>{{title}}!!!</h1>
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+         {% for m in items_sofa %}
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" src="{{ m.image_link }}" alt="{{m.title}}" style="height: 225px; width: 100%; display: block;">
+              <div class="card-body">
+                <a href="{{m.description}}">{{m.title}}</a>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">{{m.price}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3> {{m.name_group}} </h3>
+          <p> {{m.purpose_group}} </p>
+          <hr>
+         {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+<div class="features">
+    <h1>{{title}}</h1>
+
+    <ul>
+    {% for m in menu %}
+    <li> {{m}} </li>
+    {% endfor %}
+    </ul><br>
+
+    <ul>
+
+    </ul>
+
+</div>
+
+
+
+<div class="features">
+    <h1>{{title}}</h1>
+
+    <br>
+
+    <ul>
+    {% for m in items_sofa %}
+
+    <a href="{{m.description}}">{{m.title}}</a>
+    <p> {{m.purpose_group}} </p>
+    <!-- <img src="{{ m.image_link }}" alt="{{m.title}}"> -->
+
+    <hr>
+    {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
