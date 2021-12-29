@@ -7,3 +7,4 @@ git branch test # создать ветку тест
 git branch -D test # удалить ветку тест
 git checkout test # переключение веток
 git checkout -b new #создать ветку и переключиться на нее
+git marge test #совмещаяем тест с мастером
