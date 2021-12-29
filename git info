@@ -1,0 +1,4 @@
+git status
+git rm --cached <__> # исключить слежение
+git add . # добавить все файлы
+в
