@@ -9,3 +9,6 @@ git checkout test # переключение веток
 git checkout -b new #создать ветку и переключиться на нее
 git merge test #совмещаяем тест с мастером
 git push # заливаем
+git pull # выгребаем
+
+git remote -v # в какая ссылка на обновление установленна
