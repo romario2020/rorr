@@ -13,19 +13,19 @@
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">My3DSoft</h5>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="{% url 'constrdemo' %}">Demo</a>
-      <a class="p-2 text-dark" href="{% url 'frame' %}">frame</a>
-      <a class="p-2 text-dark" href="{% url 'categor' %}">Для бизнеса</a>
+      <!-- <a class="p-2 text-dark" href="{% url 'constrdemo' %}">Demo</a> -->
+      <!-- <a class="p-2 text-dark" href="{% url 'frame' %}">frame</a> -->
+      <a class="p-2 text-dark" href="{% url 'about' %}">Идея</a>
       <a class="p-2 text-dark" href="{% url 'cloths' %}">Каталог тканей</a>
       <a class="p-2 text-dark" href="{% url 'models' %}">Каталог моделей</a>
     </nav>
-    <a class="btn btn-outline-primary" href="{% url 'frame' %}">3D конфигуратор</a>
+    <a class="btn btn-outline-primary" href="{% url 'constrdemo' %}">3D Demo</a>
   </div>
 
   {% block content %}
 
   {% endblock %}
 
-  
+
 </body>
 </html>

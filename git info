@@ -4,7 +4,7 @@ git rm --cached <__> # исключить слежение
 git add . # добавить все файлы
 git commit -m "пиши коммит"
 git branch test # создать ветку тест
-git branch -D test # удалить ветку тест
+git branch -D work # удалить ветку тест
 git checkout master # переключение веток
 git checkout -b new #создать ветку и переключиться на нее
 
