@@ -8,12 +8,9 @@ git branch -D test # удалить ветку тест
 git checkout master # переключение веток
 git checkout -b new #создать ветку и переключиться на нее
 
-git merge master #совмещаяем тест с мастером
+git merge work #совмещаяем тест с мастером
+
 git push # заливаем
 git pull # выгребаем
 
 git remote -v # в какая ссылка на обновление установленна
-!!!
-
-test
-test2
