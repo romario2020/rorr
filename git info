@@ -1,4 +1,9 @@
 git status
+git branch # просмотр веток
 git rm --cached <__> # исключить слежение
 git add . # добавить все файлы
-в
+git commit -m "пиши коммит"
+git branch test # создать ветку тест
+git branch -D test # удалить ветку тест
+git checkout test # переключение веток
+git checkout -b new #создать ветку и переключиться на нее
