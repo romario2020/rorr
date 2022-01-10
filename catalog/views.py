@@ -34,8 +34,10 @@ def cloths(request):
 
 def cloths_items(request):
     posts_cloths_items = Cloth_items.objects.all()
+    posts_cloths = Cloth_group.objects.all()
     return render(request, 'catalog/cloths.html',
                   {'posts_cloths_items': posts_cloths_items,
+                   'posts_cloths': posts_cloths,
                    'title': "Каталог тканей"})
 
 
@@ -47,7 +49,6 @@ def models(request):
         product_category='Диваны прямые').order_by('title')
     return render(request, 'catalog/models.html',
                   {'posts': posts,
-                   'menu': menu_models,
                    'title': 'Каталог моделей диванов',
                    'items_all': items_all,
                    'items_sofa': items_sofa
