@@ -14,14 +14,14 @@ def categor(request):
     return render(request, 'catalog/categor.html')
 
 
-def categor_name(request, categor_name):
-    # if (request.GET):
-    #     print(request.GET)  # отлавливаем гет запрос если он есть в строке
-    return render(request, 'catalog/categor.html')
+# def categor_name(request, categor_name):
+#     # if (request.GET):
+#     #     print(request.GET)  # отлавливаем гет запрос если он есть в строке
+#     return render(request, 'catalog/categor.html')
 
 
-def categor_id(request, cat_id):
-    return render(request, 'catalog/categor.html')
+# def categor_id(request, cat_id):
+#     return render(request, 'catalog/categor.html')
 
 
 def cloths(request):

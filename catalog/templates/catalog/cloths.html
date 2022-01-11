@@ -37,29 +37,6 @@
         </div>
 
 
-    <div class="features">
-        <h1>{{title}}055</h1>
-
-        <ul>
-        {% for m in menu_cloths %}
-        <li> {{m}} </li>
-        {% endfor %}
-        </ul>
-
-        <ul>
-            {% for m in posts_cloths %}
-            <h4> {{m.name_group}} </h4>
-            <p> {{m.anons_group}} </p>
-            <a href="{{m.url_group}}">{{m.anons_group}}</a>
-            <p> {{m.purpose_group}} </p>
-            <img src="{{ m.main_photo.url }}" alt="">
-
-            <hr>
-            {% endfor %}
-        </ul>
-
-    </div>
-
 
 
 {% endblock %}
