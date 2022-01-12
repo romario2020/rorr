@@ -60,7 +60,7 @@ class Cloth_group(models.Model):
     anons_group = models.CharField('Анонс', max_length=100, blank=True)
     dates = models.DateField('Дата создания', auto_now=True)
     url_group = models.URLField('Адрес группы', max_length=200, blank=True)
-    main_photo = models.ImageField('Ссылка фото', upload_to='media\cloth_group',
+    main_photo = models.ImageField('Ссылка фото', upload_to='cloth_group/',
                                    height_field=None, width_field=None,
                                    max_length=100, blank=True)
 
@@ -79,7 +79,7 @@ class Cloth_items(models.Model):
     code_item = models.CharField('Код', max_length=25, unique=True)
     name_item = models.CharField('Название ткани', max_length=250)
     photo_item = models.ImageField(
-        'основное фото', upload_to='media\cloth_items')
+        'основное фото', upload_to='cloth_items/')
     vendor = models.ManyToManyField(Vendor, 'Поставщик', blank=True)
     color_cloth = models.ManyToManyField(Cloth_color, blank=True)
     parent_category = models.ManyToManyField(Cloth_group, blank=True)
