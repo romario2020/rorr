@@ -10,7 +10,17 @@
 
         <h1>{{title}}</h1>
 
+
+        <div  >
+            {% for m in posts_cloths  %}
+            <h5> <a href="{{m.photo_item.url}}">{{m.name_group}}</a> </h5>
+            {% endfor %}
+        </div>
+
+
+
           <div class="row">
+
                   {% for m in posts_cloths_items %}
                   <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
