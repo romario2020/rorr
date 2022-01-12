@@ -114,7 +114,7 @@ class Model_group(models.Model):
     name_group = models.CharField('Тип дивана', max_length=250)
     purpose_group = models.TextField(
         'Назначение, для..', max_length=250, blank=True)
-    photo_group = models.ImageField(upload_to='media/photos')
+    photo_group = models.ImageField(upload_to='type_model/')
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     is_publish = models.BooleanField(default=False)
